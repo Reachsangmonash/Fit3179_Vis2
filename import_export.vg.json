@@ -27,9 +27,7 @@
       }
     },
     "config": {
-      "mark": {"invalid": null},
-        "view":{"stroke":"transparent"},
-        "axis":{"domainWidth": 1}
+      "mark": {"invalid": null}
     }
   }
   
