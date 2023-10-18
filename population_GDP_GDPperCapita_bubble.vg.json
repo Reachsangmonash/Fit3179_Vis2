@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 500,
-    "title": "COVID-19 Cases per Country (13 Oct 2020)",
+    "title": "Countries GDP",
     "data": {
         "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
     },
