@@ -1,0 +1,112 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "ToyotaType";
+    src: url(Toyota-Type.ttf);
+}
+
+#layout {
+    padding: 0;
+}
+
+#reference {
+    color: #999;
+}
+
+.center {
+    justify-content: center;
+}
+
+.sidebar {
+    background: #ffffff;
+    color: #d71920;
+    box-shadow: -1px 13px 8px -1px rgba(59,59,59,0.48);
+    -webkit-box-shadow: -1px 13px 8px -1px rgba(59,59,59,0.48);
+    -moz-box-shadow: -1px 13px 8px -1px rgba(59,59,59,0.48);    
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.topic-wrapper {
+    justify-content: center;
+}
+
+.topic-header {
+    font-size: 1.5em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+
+.title,
+.title-tagline {
+    margin: 0;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.title-tagline {
+    font-weight: 300;
+    color: #d9494e;
+}
+
+.topic-title {
+    font-size: 1em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+
+.topic {
+    background-color: white;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0 auto;
+    width: 50vw;
+}
+
+.topic-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.topic-description {
+    color: #444;
+    line-height: 1.8em;
+}
+
+.highlight-red{
+    color:#d71920;
+}
+
+.highlight-blue {
+    color: #3d91b9;
+}
+
+body {
+    font-family: 'ToyotaType', sans-serif;
+    background-image: url('background.jpg');
+}
+
+
+/* .pure-u-1>* {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
