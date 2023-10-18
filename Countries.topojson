@@ -57,7 +57,7 @@
                     "type":"geojson"
                 },
                 "color": {
-                    "field": "GDP per Billion",
+                    "field": "GDP per Billion ($)",
                     "scale": {
                         "type": "linear"
                     }
