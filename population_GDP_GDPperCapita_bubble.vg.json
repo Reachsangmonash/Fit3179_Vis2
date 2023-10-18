@@ -1,0 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title": "COVID-19 Cases per Country (13 Oct 2020)",
+    "data": {
+        "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
+    },
+    "transform": [
+        {
+            "calculate": "datum.GDP/1000000000",
+            "as": "GDP per billion"
+        }
+    ],
+    "mark": "circle",
+    "encoding": {
+        "x": {
+            "field": "GDP per billion",
+            "type": "quantitative",
+            "title": "GDP Per Billion (1,000,000,000)"
+        },
+        "y": {
+            "field": "GDP Per Capita",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "Country Name",
+            "type": "nominal"
+        },
+        "size": {
+            "field": "Population",
+            "type": "quantitative",
+            "scale": {
+            "range":[50,1000]},
+            "legend": {"format": ".3s"}
+        },
+        "tooltip": [
+            {
+                "field": "Country Name",
+                "type": "nominal",
+                "title": "Country"
+            },
+            {
+                "format": ".3s",
+                "field": "Population",
+                "type": "quantitative",
+                "title": "Population"
+            },
+            {
+                "format": ".3s",
+                "field": "GDP",
+                "type": "quantitative",
+                "title": "GDP($)"
+            },
+            {
+                "format": ".3s",
+                "field": "GDP Per Capita",
+                "type": "quantitative",
+                "title": "GDP Per Capita ($)"
+            }
+        ]
+    }
+}

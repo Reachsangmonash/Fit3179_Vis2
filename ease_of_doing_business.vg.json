@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
+    },
+    "width": "container",
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Ease of Doing Business", 
+                    "type": "quantitative",
+                    "axis": {
+                        "title": "Score out of (100)",
+                        "grid": false
+                    }
+                },
+                "y": {
+                    "field": "Country Name", 
+                    "type": "nominal",
+                    "sort": "-x",
+                    "scale": {
+                        "padding": 0.6
+                    }
+                    
+
+                }
+            }
+        }
+    ],
+    
+    "config": {
+        "padding": {
+            "bottom": 10,
+            "top": 10
+        }
+    }
+  }
