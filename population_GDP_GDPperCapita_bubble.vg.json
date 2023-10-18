@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
+    "width": "container",
     "height": 500,
-    "title": "Countries GDP",
+    "title": "GDP and Population",
     "data": {
         "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
     },
@@ -17,7 +17,7 @@
         "x": {
             "field": "GDP per billion",
             "type": "quantitative",
-            "title": "GDP Per Billion (1,000,000,000)"
+            "title": "GDP Per Billion"
         },
         "y": {
             "field": "GDP Per Capita",
@@ -31,9 +31,20 @@
             "field": "Population",
             "type": "quantitative",
             "scale": {
-            "range":[50,1000]},
-            "legend": {"format": ".3s"}
+                "range": [
+                    50,
+                    1000
+                ]
+            },
+            "legend": {
+                "format": ".2s"
+            }
         },
+        "text": 
+            {
+                "field": "Country Name",
+                "type": "nominal"
+            },
         "tooltip": [
             {
                 "field": "Country Name",

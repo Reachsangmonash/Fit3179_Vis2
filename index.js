@@ -1,26 +1,26 @@
-var map = "salesMapData.vg.json";
-var factoryMap = "factoryMapData.vg.json";
-var salesProdBarGraph = "salesProductionGraphs.vg.json"
-var top10car = "top10CarGraph.vg.json"
-var marketCapLineGraph = "marketCapLineGraph.vg.json"
+var map1 = "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/worldGDP.topojson";
+var map2 = "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries.topojson";
+var bubbleGraph = "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/population_GDP_GDPperCapita_bubble.vg.json"
+var eodb = "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/ease_of_doing_business.vg.json"
+var ieportGraph = "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/import_export.vg.json"
 var marketCap2023BarGraph = "marketCap2023Graph.vg.json"
 var salesProdMap = "salesProductionMapData.vg.json"
-console.log("Give Leonardo Prasetyo 30369908 High HD Please :)")
-vegaEmbed('#factory-location-map', factoryMap).then(function(result) {
-    // Access vega view
-}).catch(console.error);
-vegaEmbed('#prod-sales-graph', salesProdBarGraph).then(function(result) {
+// Access vega view
+vegaEmbed('#map01', map1).then(function (result) {
 
 }).catch(console.error);
-vegaEmbed('#top10car', top10car).then(function(result) {
+vegaEmbed('#bbgraph', bubbleGraph).then(function (result) {
 
 }).catch(console.error);
-vegaEmbed('#top10market', marketCapLineGraph).then(function(result) {
+vegaEmbed('#eodb', eodb).then(function (result) {
 
 }).catch(console.error);
-vegaEmbed('#top10autocompany', marketCap2023BarGraph).then(function(result) {
+vegaEmbed('#ieport', ieportGraph).then(function (result) {
 
 }).catch(console.error);
-vegaEmbed('#production-sales-country-map', salesProdMap).then(function(result) {
+vegaEmbed('#top10autocompany', marketCap2023BarGraph).then(function (result) {
+
+}).catch(console.error);
+vegaEmbed('#map02', map2).then(function (result) {
 
 }).catch(console.error);

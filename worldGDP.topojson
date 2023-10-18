@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "World GPD",
-    "width": 800,
-    "height": 400,
+    "title": "",
+    "width": "container",
+    "height": 250,
     "layer": [
         {
             "projection": {
@@ -46,8 +46,7 @@
                         "key": "properties.NAME"
                     },
                     "as": "geo"
-                },
-                {}
+                }
             ],
             "mark": "geoshape",
             "encoding": {

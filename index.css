@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "ToyotaType";
-    src: url(Toyota-Type.ttf);
-}
 
 #layout {
     padding: 0;
@@ -23,7 +19,7 @@
 
 .sidebar {
     background: #ffffff;
-    color: #d71920;
+    color: #d7ae19;
     box-shadow: -1px 13px 8px -1px rgba(59,59,59,0.48);
     -webkit-box-shadow: -1px 13px 8px -1px rgba(59,59,59,0.48);
     -moz-box-shadow: -1px 13px 8px -1px rgba(59,59,59,0.48);    
@@ -45,27 +41,18 @@
 
 .topic-header {
     font-size: 1.5em;
-    color: #222;
+    color: #000000;
     margin-bottom: 0.2em;
 }
 
-.title,
-.title-tagline {
-    margin: 0;
-}
 
 .title {
     text-transform: uppercase;
 }
 
-.title-tagline {
-    font-weight: 300;
-    color: #d9494e;
-}
-
 .topic-title {
     font-size: 1em;
-    color: #222;
+    color: #000000;
     margin-bottom: 0.2em;
 }
 
@@ -75,30 +62,23 @@
     padding-left: 1em;
     padding-right: 1em;
     margin: 0 auto;
-    width: 50vw;
+    width: 60vw;
 }
 
 .topic-meta {
-    color: #999;
+    color: #000000;
     font-size: 90%;
     margin: 0;
 }
 
 .topic-description {
-    color: #444;
+    color: #000000;
     line-height: 1.8em;
 }
 
-.highlight-red{
-    color:#d71920;
-}
-
-.highlight-blue {
-    color: #3d91b9;
-}
 
 body {
-    font-family: 'ToyotaType', sans-serif;
+    font-family: sans-serif;
     background-image: url('background.jpg');
 }
 

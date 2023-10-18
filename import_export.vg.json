@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 350,
+    "title": "Import/Export",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
+    },
+    "repeat": {"layer": ["Import", "Export"]},
+    "spec": {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Country Name",
+          "type": "nominal",
+          "stack": false
+        },
+        "y": {
+          "aggregate":"sum",
+          "field": {"repeat": "layer"},
+          "type": "quantitative",
+          "title": "Import/Exmport",
+          "stack": false
+        },
+        "color": {"datum": {"repeat": "layer"}, "title": "Gross"},
+        "xOffset": {"datum": {"repeat": "layer"}}
+      }
+    },
+    "config": {
+      "mark": {"invalid": null},
+        "view":{"stroke":"transparent"},
+        "axis":{"domainWidth": 1}
+    }
+  }
+  
