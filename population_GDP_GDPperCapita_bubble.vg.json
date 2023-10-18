@@ -6,10 +6,26 @@
     "data": {
         "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
     },
+    "params": [
+         {
+            "name": "Population_Above",
+            "value": 0,
+            "bind": {
+              "input": "range",
+              "min": 0,
+              "max": 100000000,
+              "step": 10000,
+              "name": "Minimum Population: "
+      }
+    }
+    ],
     "transform": [
         {
             "calculate": "datum.GDP/1000000000",
             "as": "GDP per billion"
+        },
+        {
+            "filter": "datum.Population > Population_Above"
         }
     ],
     "mark": "circle",
