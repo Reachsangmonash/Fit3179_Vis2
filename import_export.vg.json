@@ -4,38 +4,47 @@
     "height": 350,
     "title": "Import/Export",
     "data": {
-      "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
+        "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
     },
-    "repeat": {"layer": ["Import", "Export"]},
-    "spec": {
-      "mark": "bar",
-      "encoding": {
-        "x": {
-          "field": "Country Name",
-          "type": "nominal",
-          "stack": false
-        },
-        "y": {
-          "aggregate":"sum",
-          "field": {"repeat": "layer"},
-          "type": "quantitative",
-          "title": "Import/Exmport",
-          "stack": false
-        },
-        "color": {"datum": {"repeat": "layer"}, "title": "Gross"},
-        "xOffset": {"datum": {"repeat": "layer"}},
-        "tooltip":[
-            {"field": "Country Name",
-            "type": "nominal",
-                "title": "Country"},
-        {"field": {"repeat": "layer"},
-    "type": "quantitative"}
+    "repeat": {
+        "layer": [
+            "Import",
+            "Export"
         ]
-          
-      }
     },
-    "config": {
-      "mark": {"invalid": null}
-    },
-  }
-  
+    "spec": {
+        "mark": "bar",
+        "encoding": {
+            "x": {
+                "field": "Country Name",
+                "type": "nominal",
+                "stack": false
+            },
+            "y": {
+                "aggregate": "sum",
+                "field": {
+                    "repeat": "layer"
+                },
+                "type": "quantitative",
+                "title": "Import/Exmport",
+                "stack": false
+            },
+            "color": {
+                "datum": {
+                    "repeat": "layer"
+                },
+                "title": "Gross"
+            },
+            "xOffset": {
+                "datum": {
+                    "repeat": "layer"
+                }
+            }
+        },
+        "config": {
+            "mark": {
+                "invalid": null
+            }
+        }
+    }
+}
