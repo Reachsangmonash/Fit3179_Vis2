@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":"The Scoring",
     "data": {
       "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/Countries%203.csv"
     },
@@ -12,7 +13,7 @@
                     "field": "Ease of Doing Business", 
                     "type": "quantitative",
                     "axis": {
-                        "title": "Score out of (100)",
+                        "title": "Score out of 100",
                         "grid": false
                     }
                 },
