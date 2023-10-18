@@ -33,7 +33,7 @@
             "transform": [
                   {
                     "calculate": "datum.GDP/1000000000",
-                    "as": "GDP per Billion"
+                    "as": "GDP per Billion ($)"
                 },
                 {
                     "lookup": "Country Name",
@@ -69,7 +69,7 @@
                         "title": "Country:"
                     },
                     {  
-                        "field": "GDP per Billion",
+                        "field": "GDP per Billion ($)",
                         "type": "quantitative",
                         "title": "GDP per Billion ($):"
                     }
