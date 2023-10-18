@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "World GPD",
+    "width": 800,
+    "height": 400,
+    "layer": [
+        {
+            "projection": {
+                "type": "equalEarth"
+            },
+            "data": {
+                "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/ne_110m_admin_0_countries.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_110m_admin_0_countries"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightgrey",
+                "stroke": "white"
+            }
+        },
+        {
+            "projection": {
+                "type": "equalEarth"
+            },
+            "data": {
+                "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/AllCountiresFiltered.csv"
+            },
+            "transform": [
+                {
+                    "calculate": "datum.GDP/1000000000",
+                    "as": "GDP per Billion ($)"
+                },
+                {
+                    "lookup": "Country Name",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/Reachsangmonash/Fit3179_Vis2/main/ne_110m_admin_0_countries.topojson",
+                            "format": {
+                                "type": "topojson",
+                                "feature": "ne_110m_admin_0_countries"
+                            }
+                        },
+                        "key": "properties.NAME"
+                    },
+                    "as": "geo"
+                },
+                {}
+            ],
+            "mark": "geoshape",
+            "encoding": {
+                "shape": {
+                    "field": "geo",
+                    "type": "geojson"
+                },
+                "color": {
+                    "field": "GDP per Billion ($)",
+                    "scale": {
+                        "type": "linear"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Country Name",
+                        "type": "nominal",
+                        "title": "Country:"
+                    },
+                    {
+                        "field": "GDP per Billion ($)",
+                        "type": "quantitative",
+                        "title": "GDP per Billion ($):"
+                    }
+                ]
+            }
+        }
+    ]
+}
