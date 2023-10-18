@@ -23,11 +23,19 @@
           "stack": false
         },
         "color": {"datum": {"repeat": "layer"}, "title": "Gross"},
-        "xOffset": {"datum": {"repeat": "layer"}}
+        "xOffset": {"datum": {"repeat": "layer"}},
+        "tooltip":[
+            {"field": "Country Name",
+            "type": "nominal",
+                "title": "Country"},
+        {"field": {"repeat": "layer"},
+    "type": "quantitative"}
+        ]
+          
       }
     },
     "config": {
       "mark": {"invalid": null}
-    }
+    },
   }
   
